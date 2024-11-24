@@ -1,0 +1,26 @@
+/* Add spacing between nodes */
+.family-node {
+    margin-bottom: 20px;
+}
+
+/* Highlight connecting lines */
+.connecting-line {
+    height: 2px;
+    background-color: gray;
+    position: absolute;
+    z-index: -1;
+}
+
+/* Customize card styling */
+.node-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.node-card img {
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}

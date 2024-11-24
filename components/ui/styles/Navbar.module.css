@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+}
+
+.brand {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007f7f;
+  text-transform: uppercase;
+}
+
+.brand a {
+  color: #007f7f;
+  text-decoration: none;
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s ease;
+}
+
+.navItem {
+  font-size: 1.2rem;
+  color: #007f7f;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.navItem:hover {
+  background-color: rgba(0, 127, 127, 0.1);
+  color: #00b4d8;
+  transform: translateY(-4px);
+}
+
+.signIn {
+  background-color: #ff416c;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.signIn:hover {
+  background-color: #d8243f;
+  transform: translateY(-4px);
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none; 
+  background: none;
+  cursor: pointer;
+  z-index: 1001;
+  /* width:100px; */
+  /* height:100px; */
+}
+
+.hamburgerLine {
+    width: 30px;
+    height: 3px;
+    background-color: #007f7f;
+    margin: 5px 0;
+    transition: all 0.4s ease;
+}
+
+/* Hamburger animation */
+.hamburger.open .hamburgerLine:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .hamburgerLine:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .hamburgerLine:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Styles */
+@media (max-width: 810px) {
+  .navLinks {
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    background: rgba(255, 255, 255, 0.95); /* Almost white with opacity */
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 8px;
+    display: none;
+    transform: translateY(-20px);
+  }
+
+
+  .searchBar {
+    width: 200px;
+  }
+
+  .navLinks.show {
+    display: flex;
+  }
+
+  /* Display the hamburger button on smaller screens */
+  .hamburger {
+    display: block !important;
+  }
+}
